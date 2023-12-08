@@ -1,22 +1,17 @@
-export function avg(sk1, sk2, sk3, sk4) {
-  const sum = (sk1 + sk2 + sk3 + sk4) / 4;
-  return sum;
+// sukurti funkcija kuri suskaiciuoja 4 skaiciu vidurki
+// avg(4,5,8,7) grazina vidurki
+export function avg(n1, n2, n3, n4) {
+  const total = n1 + n2 + n3 + n4;
+  return total / 4;
 }
 
-export function arrAvg(arr) {
-  let skaiciai = 0;
-  arr.forEach((obj) => {
-    skaiciai += obj;
-  });
-  const arrAvg = skaiciai / arr.length;
-  return arrAvg;
+export function total(n1, n2, n3, n4) {
+  console.log("total:", n1 + n2 + n3 + n4);
+  return n1 + n2 + n3 + n4;
 }
-
-export function total(sk1, sk2, sk3, sk4) {
-  return sk1 + sk2 + sk3 + sk4;
-}
-
-export function sandauga(sk1, sk2, sk3, sk4) {
-  const rez = sk1 * sk2 * sk3 * sk4;
+// exportuoti ir importuoti ir panaudoti sandaug fn main.js
+export function sandaug(n1, n2, n3, n4) {
+  const rez = n1 * n2 * n3 * n4;
+  console.log("sandaug ===", rez);
   return rez;
 }

@@ -1,31 +1,25 @@
-// default export
-function create(tagName, className, text) {
+// iskelti makeEl i htmlEl moduli, exportuoti, importuoti ir isitikinti kad veikia main.js
+function createHtmlEL(tagName, attrsObj, text = false) {
+  // kuriam el
   const newEl = document.createElement(tagName);
-  newEl.className = className;
-  newEl.textContent = text;
+  // sudeti visus atributus
+  // sukti cikla per attr obj
+  for (let key in attrsObj) {
+    let value = attrsObj[key];
+    newEl.setAttribute(key, value);
+  }
+  // ikelem text jei yra paduotas
+  if (text !== false) {
+    newEl.textContent = text;
+  }
   return newEl;
 }
+
+const num1 = 500;
 export function sayHi() {
   console.log("hi");
 }
 
-// norim galeti prideti bet koki atributa createHtmlEl funkcija
+// norim galeti prideti bet koki atributa createHtmlEL funkcija
 
-createHtmlEl(
-  "img",
-  {
-    src: "/img/cat.jpg",
-    alt: "image of a cat",
-    class: "img-fluid",
-  },
-  null
-);
-createHtmlEl(
-  "h2",
-  {
-    class: "bg-primary",
-  },
-  "Hello world"
-);
-
-export default create;
+export default createHtmlEL;
