@@ -2,7 +2,7 @@
 import { avg, total, sandauga, arrAvg } from "./modules/numberFn.js";
 
 // default import
-import makeEl from "./modules/htmlEl.js";
+import makeEl, { sayHi } from "./modules/htmlEl.js";
 
 total(4, 5, 8, 7);
 const skaiciuAvg = avg(4, 5, 8, 7);
