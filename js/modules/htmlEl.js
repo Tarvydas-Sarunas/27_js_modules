@@ -1,4 +1,5 @@
-export function makeEl(tagName, className, text) {
+// default export
+export default function create(tagName, className, text) {
   const newEl = document.createElement(tagName);
   newEl.className = className;
   newEl.textContent = text;

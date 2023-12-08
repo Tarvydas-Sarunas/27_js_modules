@@ -1,5 +1,8 @@
-import { avg, total, sandauga } from "./modules/numberFn.js";
-import { makeEl } from "./modules/htmlEl.js";
+// name import
+import { avg, total, sandauga, arrAvg } from "./modules/numberFn.js";
+
+// default import
+import makeEl from "./modules/htmlEl.js";
 
 total(4, 5, 8, 7);
 const skaiciuAvg = avg(4, 5, 8, 7);
